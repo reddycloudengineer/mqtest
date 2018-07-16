@@ -69,8 +69,8 @@ def imageSaveS3(encodedImageTxt,warp_id):
     tempFname='decode-'+str(warp_id)+'.png'
     im.save('decode-'+str(warp_id)+'.png')
     client = boto3.client('s3',
-    aws_access_key_id='AKIAJV43BBV2PTOEETMA',
-    aws_secret_access_key='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')
+    aws_access_key_id='xxxxx',
+    aws_secret_access_key='yyyyyy')
     client.upload_file(tempFname,'imaget-test',tempFname)
     # client.put_object(Body='test file', Bucket='imaget-test', Key='anotherfilename.txt')
 
